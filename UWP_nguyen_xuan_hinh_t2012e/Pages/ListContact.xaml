@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid BorderThickness="1,1,1,5">
+    <Grid>
+        <Custom:DataGrid x:Name="ListData" HorizontalAlignment="Center" Height="502" VerticalAlignment="Center" Width="726" SelectionMode="Single"/>
     </Grid>
 </Page>

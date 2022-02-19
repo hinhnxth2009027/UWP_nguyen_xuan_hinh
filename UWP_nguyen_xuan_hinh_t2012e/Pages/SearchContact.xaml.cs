@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UWP_nguyen_xuan_hinh_t2012e.DB;
+using UWP_nguyen_xuan_hinh_t2012e.Entity;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +24,22 @@ namespace UWP_nguyen_xuan_hinh_t2012e.Pages
     /// </summary>
     public sealed partial class SearchContact : Page
     {
+        private DatabaseMigration database = new DatabaseMigration();
         public SearchContact()
         {
             this.InitializeComponent();
+            this.Loaded += ListPage_Loaded;
+        }
+
+        private void ListPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            resultData.ItemsSource = database.ListData();
+        }
+
+        private void searchByKeyWord(object sender, RoutedEventArgs e)
+        {
+            List<Contact> listContactByName = database.search(keyWord.Text);
+            resultData.ItemsSource = listContactByName;
         }
     }
 }

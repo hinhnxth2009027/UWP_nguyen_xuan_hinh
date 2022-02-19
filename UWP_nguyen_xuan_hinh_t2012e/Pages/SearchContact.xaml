@@ -6,9 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:Custom="using:Microsoft.Toolkit.Uwp.UI.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Custom:DataGrid  x:Name="resultData" HorizontalAlignment="Center" Height="273" Margin="0,227,0,0" VerticalAlignment="Top" Width="313" SelectionMode="Single"/>
+        <Button Content="Search" Margin="794,110,0,0" VerticalAlignment="Top" Width="113" Click="searchByKeyWord"/>
+        <TextBox x:Name="keyWord" HorizontalAlignment="Left" Margin="590,110,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" RenderTransformOrigin="0.5,0.5" PlaceholderText="Search by name" />
     </Grid>
 </Page>

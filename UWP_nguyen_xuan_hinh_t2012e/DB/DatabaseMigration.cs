@@ -56,7 +56,7 @@ namespace UWP_nguyen_xuan_hinh_t2012e.DB
         {
             var contacts = new List<Contact>();
 
-            using (var statement = conn.Prepare($"select * from contacts where Name like %{keyword}%"))
+            using (var statement = conn.Prepare($"select * from contacts where Name like '%{keyword}%'"))
             {
                 while (statement.Step() == SQLiteResult.ROW)
                 {

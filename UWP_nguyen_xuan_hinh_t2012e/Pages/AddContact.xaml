@@ -13,9 +13,9 @@
             <Windows10version1903:ThemeShadow x:Name="SharedShadow" />
         </Grid.Resources>
 
-        <Grid x:Name="BackgroundGrid" Background="White"/>
+        <Grid x:Name="BackgroundGrid"/>
         <StackPanel x:Name="AddForm" Width="450" Height="350" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="562,306,0,0" 
-                    Windows10version1903:Shadow="{StaticResource SharedShadow}" Background="White" >
+                    Windows10version1903:Shadow="{StaticResource SharedShadow}" >
             <TextBlock Text="Add Contact" FontWeight="Bold" Margin="25 20 0 20"/>
             <NavigationViewItemSeparator/>
             <StackPanel Width="400">
